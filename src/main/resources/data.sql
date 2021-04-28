@@ -1,16 +1,23 @@
-INSERT INTO author (name)
+INSERT INTO authors (name)
 VALUES
     ('Dan Türell'),
     ('Tove Ditlevsen'),
-    ('Bjarne Reuter');
+    ('Bjarne Reuter'),
+    ('Lotte Rienecker'),
+    ('Peter Stray Jørgensen');
 INSERT INTO books (title)
 VALUES
-    ('Mord i mørket'),
-    ('Barndommens gade'),
-    ('Kidnapning');
-INSERT INTO autor_book (author_id, book_id)
+    ('Mord i Mørket'),
+    ('Barndommens Gade'),
+    ('Kidnapning'),
+    ('Den Gode Opgave'),
+    ('Karma Cowboy');
+INSERT INTO author_book (author_id, book_id)
 VALUES
     (1, 1),
+    (1, 5),
     (2, 2),
-    (3, 3);
+    (3, 3),
+    (4, 4),
+    (5, 4);
 

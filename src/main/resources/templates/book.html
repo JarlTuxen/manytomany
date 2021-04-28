@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <div class="row justify-content-center">
-        <h1>Bog <span th:text = "${book}">Great Expectations</span></h1>
+        <h1>Bog <span th:text = "${book.title}">Great Expectations</span></h1>
     </div>
 
     <div class="row">
@@ -22,7 +22,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="a : ${b.authors}">
+            <tr th:each="a : ${book.authors}">
                 <td th:text="${a.id}">1</td>
                 <td th:text="${a.name}">Charles Dickens</td>
                 <td><a th:href="@{'/author/' + ${a.id}}" class="btn btn-outline-primary">Vis forfatter</a></td>
@@ -33,7 +33,7 @@
     </div>
 
     <div class="row">
-        <a th:href="@{'index}" class="btn btn-primary">Oversigt</a>
+        <a href="/index" class="btn btn-primary">Oversigt</a>
     </div>
 </div>
 </body>
