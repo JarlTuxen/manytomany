@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Forfatter</title>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <h1>Forfatter <span th:text = "${author}">Charles Dickens</span></h1>
+    </div>
+
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Navn</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="b : ${a.books}">
+                <td th:text="${b.id}">1</td>
+                <td th:text="${b.title}">Great Expectations</td>
+                <td><a th:href="@{'/book/' + ${b.id}}" class="btn btn-outline-primary">Vis bog</a></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <a th:href="@{'index}" class="btn btn-primary">Oversigt</a>
+    </div>
+</div>
+</body>
+</html>
